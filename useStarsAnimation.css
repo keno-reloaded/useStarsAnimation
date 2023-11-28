@@ -1,0 +1,80 @@
+:root {
+  --glow-rgb: 253 195 7;
+}
+
+.glow-point {
+  position: absolute;
+  box-shadow: 0rem 0rem 1.2rem 0.6rem rgb(var(--glow-rgb));
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  font-size: 1rem;
+  animation-duration: 1500ms;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='49' height='48' viewBox='0 0 49 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.74 3.00146C22.6381 0.237523 26.5483 0.237528 27.4464 3.00146L31.1498 14.3994C31.5514 15.6354 32.7033 16.4723 34.0029 16.4723H45.9874C48.8936 16.4723 50.1019 20.1912 47.7508 21.8994L38.0551 28.9436C37.0037 29.7076 36.5637 31.0617 36.9653 32.2977L40.6687 43.6957C41.5668 46.4596 38.4033 48.758 36.0522 47.0498L26.3566 40.0055C25.3051 39.2415 23.8813 39.2415 22.8298 40.0055L13.1342 47.0498C10.7831 48.758 7.61963 46.4596 8.51769 43.6956L12.2211 32.2977C12.6227 31.0617 12.1827 29.7076 11.1313 28.9436L1.43564 21.8994C-0.915502 20.1912 0.29283 16.4723 3.199 16.4723H15.1835C16.4831 16.4723 17.635 15.6354 18.0366 14.3994L21.74 3.00146Z' fill='%23fdc307'/%3E%3C/svg%3E%0A");
+  background-position: center center;
+  background-size: cover;
+  height: 20px;
+  width: 20px;
+}
+
+@keyframes fall-1 {
+  0% {
+    transform: translate(0px, 0px) rotateX(45deg) rotateY(30deg) rotateZ(0deg)
+      scale(0.25);
+    opacity: 0;
+  }
+
+  5% {
+    transform: translate(10px, -10px) rotateX(45deg) rotateY(30deg)
+      rotateZ(0deg) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(25px, 200px) rotateX(180deg) rotateY(270deg)
+      rotateZ(90deg) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes fall-2 {
+  0% {
+    transform: translate(0px, 0px) rotateX(-20deg) rotateY(10deg) scale(0.25);
+    opacity: 0;
+  }
+
+  10% {
+    transform: translate(-10px, -5px) rotateX(-20deg) rotateY(10deg) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-10px, 160px) rotateX(-90deg) rotateY(45deg)
+      scale(0.25);
+    opacity: 0;
+  }
+}
+
+@keyframes fall-3 {
+  0% {
+    transform: translate(0px, 0px) rotateX(0deg) rotateY(45deg) scale(0.5);
+    opacity: 0;
+  }
+
+  15% {
+    transform: translate(7px, 5px) rotateX(0deg) rotateY(45deg) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(20px, 120px) rotateX(-180deg) rotateY(-90deg)
+      scale(0.5);
+    opacity: 0;
+  }
+}
